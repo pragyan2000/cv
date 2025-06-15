@@ -652,11 +652,21 @@
                 left: 0;
             }
         }
+         @media only screen and (max-width: 600px) {
+    .responsive-email-link {
+      font-size: 1rem; /* Slightly smaller font size */
+      padding: 10px; /* Adjust padding for better touch */
+      word-break: break-all; /* Ensures long email breaks to next line if needed */
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .responsive-email-link {
+      font-size: 0.9rem;
+    }
+  }
     </style>
-    <style>
-
-
-</style>
+ 
 </head>
 <body>
     <!-- Structured Data (JSON-LD) -->
@@ -1181,7 +1191,15 @@
                             </div>
                             <div>
                                 <p style="margin: 0 0 5px 0; font-size: 0.9rem; opacity: 0.8;">Email</p>
-                                <a href="mailto:pragyanyaduvanshi2000@gmail.com" style="color: white; text-decoration: none; font-weight: 500; font-size: 1.1rem;">pragyanyaduvanshi2000@gmail.com</a>
+<a href="mailto:pragyanyaduvanshi2000@gmail.com" 
+   style="color: white; text-decoration: none; font-weight: 500; 
+          font-size: 1.1rem;
+          display: inline-block;
+          padding: 8px 12px; 
+          -webkit-tap-highlight-color: transparent; 
+   class="responsive-email-link">
+   pragyanyaduvanshi2000@gmail.com
+</a>
                             </div>
                         </div>
                         
