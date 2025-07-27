@@ -212,21 +212,68 @@
             margin-bottom: 20px;
         }
         
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        .social-links a:hover {
-            color: var(--secondary);
-        }
+       /* Social links responsive styles */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.social-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Specific email link styles */
+.responsive-email-link {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+/* Mobile-specific styles */
+@media only screen and (max-width: 600px) {
+    .social-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .social-links a {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
+    .responsive-email-link {
+        white-space: normal;
+        word-break: break-all;
+        font-size: 0.9rem;
+    }
+    
+    .phone-link {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .responsive-email-link {
+        font-size: 0.85rem;
+    }
+}
         
         /* Stats Section */
         .stats-container {
@@ -747,12 +794,12 @@
                 </div>
             </div>
             
-            <div class="social-links">
-                <a href="CV.pdf">Resume</a>
-                <a href="https://www.linkedin.com/in/pragyan-yaduvanshi-264430214" target="_blank">LinkedIn</a>
-                <a href="mailto:pragyanyaduvanshi2000@gmail.com">Email</a>
-                <a href="tel:+916376501854">Phone: 6376501854</a>
-            </div>
+           <div class="social-links">
+    <a href="CV.pdf" class="resume-link">Resume</a>
+    <a href="https://www.linkedin.com/in/pragyan-yaduvanshi-264430214" target="_blank" class="linkedin-link">LinkedIn</a>
+    <a href="mailto:pragyanyaduvanshi2000@gmail.com" class="email-link responsive-email-link">Email</a>
+    <a href="tel:+916376501854" class="phone-link">Phone: 6376501854</a>
+</div>
         </div>
         
         <div class="hero-animation">
